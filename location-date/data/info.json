@@ -1,0 +1,68 @@
+{
+ "name": "Missão Católica Portuguesa Köln",
+ "address": "Ursulagartenstraße 18, 50668 Köln",
+ "communities": {
+  "koeln": {
+   "label": "Köln",
+   "regular": [
+    {
+     "day": "Sunday",
+     "time": "11:30",
+     "church": "Basílica St. Ursula",
+     "address": "Ursulaplatz 28, 50668 Köln"
+    },
+    {
+     "day": "Wednesday",
+     "time": "19:00",
+     "church": "Capela João Paulo II",
+     "address": "Ursulagartenstraße 18, 50668 Köln"
+    }
+   ]
+  },
+  "bonn": {
+   "label": "Bonn",
+   "regular": [
+    {
+     "day": "Sunday",
+     "time": "14:00",
+     "church": "St. Josef",
+     "address": "Kaiser-Karl-Ring 2, 53111 Bonn"
+    }
+   ]
+  },
+  "neuss": {
+   "label": "Neuss",
+   "regular": [
+    {
+     "day": "Sunday",
+     "time": "09:00",
+     "church": "St. Marien",
+     "address": "Marienkirchplatz 30, 41460 Neuss"
+    }
+   ]
+  },
+  "burscheid": {
+   "label": "Burscheid",
+   "regular": [
+    {
+     "day": "Once a month, Sunday (see dates)",
+     "time": "17:00",
+     "church": "St. Laurentius",
+     "address": "Altenberger Str. 3, 51399 Burscheid"
+    }
+   ]
+  }
+ },
+ "office": {
+  "hours": [
+   "Tue 10:00–13:00",
+   "Wed 10:00–13:00 and 17:30–18:30",
+   "Thu 10:00–13:00",
+   "Fri 15:00–18:00"
+  ],
+  "phone": "0221 355 6558",
+  "email": "secretariamissaoportuguesa@gmail.com"
+ },
+ "official": "https://www.missaoportuguesa.com",
+ "instagram": "@missaoportuguesacolonia"
+}
