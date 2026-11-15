@@ -19,7 +19,8 @@ WHAT to build is in `SPEC.md`. WHAT IS TRUE is in `data/`.
 ## Design (the grey rule)
 - System font only, greys only (black, white, greys), no images, no icons, no animations.
 - Mobile first: design for a 360 px wide phone, then let it grow (desktop layout from 900 px).
-- Large touch targets (at least 44 px), good contrast, readable without zoom, readable outside.
+- Compact layout (see the wireframes): most of each page visible on the first screen.
+- Touch targets at least 24 px (WCAG 2.2 AA) with enough space between them; good contrast, readable without zoom, readable outside.
 
 ## Code quality
 - Semantic HTML (header, nav, main, section, h1–h3, lists, buttons for actions, links for navigation).

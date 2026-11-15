@@ -180,13 +180,98 @@ input, select, textarea { font: inherit; color: var(--ink); min-height: 44px; pa
 .site-footer { background: var(--fill); padding: 16px; font-size: 14px; }
 .site-footer p { margin: 0 0 6px; }
 
+/* Compact density (v1.0): closer to the wireframe, most of each page visible on the first screen.
+   Touch targets ≥ 24 px (WCAG 2.2 AA) with spacing between them. */
+body { font-size: 14px; padding-bottom: 60px; }
+.site-header { padding: 10px 16px 2px; }
+.site-name { font-size: 13px; }
+.main-nav a { min-height: 52px; font-size: 12px; }
+h1 { font-size: 20px; margin: 6px 0 8px; }
+h2 { font-size: 16px; }
+section { margin-top: 14px; }
+.sec-head { margin-bottom: 6px; }
+.sec-head a { font-size: 12px; padding: 6px 0; }
+small, .small { font-size: 12px; }
+.month { font-size: 11px; margin: 12px 0 4px; }
+.sub { font-size: 13px; }
+.empty { padding: 10px; font-size: 13px; }
+
+.chips { gap: 6px; margin-bottom: 8px; }
+.chip { min-height: 30px; padding: 0 12px; border-radius: 15px; font-size: 12.5px; border-width: 1px; }
+
+.hero { padding: 10px 12px; border-radius: 12px; gap: 2px; }
+.hero small { font-size: 11px; }
+.hero-title { font-size: 17px; }
+.hero .badge { font-size: 11px; }
+.alerts { padding: 7px 10px; margin-top: 8px; border-width: 1.5px; border-radius: 10px; }
+.alerts ul { font-size: 13px; }
+.alerts li + li { margin-top: 1px; }
+.after { font-size: 13px; margin-top: 6px; }
+
+.cards { gap: 6px; }
+.card { grid-template-columns: 48px 1fr; gap: 10px; padding: 8px 12px; border-radius: 12px; }
+.card .ph { width: 48px; height: 48px; }
+.card small { font-size: 11px; }
+.card b { font-size: 15px; }
+.card .meta { font-size: 12px; }
+.tags { margin-top: 2px; }
+.tags em, .tag { font-size: 10.5px; padding: 1px 7px; }
+.rows a { min-height: 40px; padding: 8px 12px; font-size: 13px; }
+
+.regular { padding: 8px 12px; font-size: 13px; margin-bottom: 8px; border-radius: 12px; }
+.regular small { font-size: 11px; }
+.regular p { margin-top: 3px; }
+.regular span { font-size: 11px; }
+.mass-row { padding: 6px 12px; gap: 10px; margin-bottom: 5px; border-radius: 10px; }
+.mass-row.is-off { border-width: 1.5px; }
+.mass-date { width: 32px; font-size: 10px; }
+.mass-date b { font-size: 17px; }
+.mass-text b { font-size: 13.5px; }
+.mass-text span { font-size: 12px; }
+.mass-text small { font-size: 11px; }
+.badge { font-size: 11px; padding: 2px 8px; }
+
+.toggle { min-height: 32px; font-size: 13px; }
+.toggle input, .check input { width: 18px; height: 18px; }
+.count { font-size: 12px; }
+
+.crumb { font-size: 12px; }
+.crumb a { padding: 4px 0; }
+.ph-big { height: 140px; border-radius: 12px; margin-bottom: 8px; }
+.warn { padding: 7px 10px; font-size: 13px; border-width: 1.5px; }
+.facts { grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0; }
+.facts div { padding: 7px 8px; }
+.facts dt { font-size: 10.5px; }
+.facts dd { font-size: 12px; }
+.btn { min-height: 40px; border-radius: 20px; font-size: 14px; }
+.actions { gap: 6px; margin-top: 12px; }
+
+.field { font-size: 12px; margin-bottom: 8px; gap: 3px; }
+input, select, textarea { min-height: 34px; padding: 6px 10px; font-size: 13px; border-width: 1px; border-radius: 8px; }
+.chip-r span { min-height: 28px; padding: 0 11px; font-size: 12px; border-width: 1px; border-radius: 14px; }
+.upload { min-height: 44px; font-size: 13px; }
+.hint { font-size: 12px; }
+.box { padding: 12px; }
+.site-footer { font-size: 12px; padding: 12px 16px; }
+
+/* v1.0 step 1b: swipe rows (Create › Type, Today › This week), 3 fact boxes */
+.facts { grid-template-columns: repeat(3, 1fr); }
+.chips-scroll { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 2px 16px; }
+@media (max-width: 899px) {
+  .cards-scroll { display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px; padding: 0 16px 4px; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; scrollbar-width: none; }
+  .cards-scroll::-webkit-scrollbar { display: none; }
+  .cards-scroll > li { flex: 0 0 46%; scroll-snap-align: start; display: flex; }
+  .cards-scroll .card { flex: 1; display: flex; flex-direction: column; align-items: stretch; gap: 6px; padding: 8px; }
+  .cards-scroll .card .ph { width: 100%; height: 64px; border-radius: 8px; }
+}
+
 /* Desktop (≥ 900 px): menu moves to the top, content in columns */
 @media (min-width: 900px) {
   body { padding-bottom: 0; }
   .site-header { display: flex; align-items: center; gap: 32px; padding: 16px 32px; border-bottom: 1px solid var(--line); }
-  .site-name { font-size: 18px; }
+  .site-name { font-size: 16px; }
   .main-nav { position: static; display: flex; gap: 8px; background: none; border: 0; flex: 1; }
-  .main-nav a { min-height: 44px; padding: 0 12px; font-size: 16px; }
+  .main-nav a { min-height: 38px; padding: 0 12px; font-size: 15px; }
   .main-nav .nav-create, .main-nav .nav-create[aria-current="page"] { margin-left: auto; background: var(--dark); color: #fff; border-radius: 22px; padding: 0 18px; }
   main { padding: 16px 32px 40px; }
   .chips { margin: 0 0 10px; padding: 2px 0; flex-wrap: wrap; }
@@ -209,8 +294,8 @@ input, select, textarea { font: inherit; color: var(--ink); min-height: 44px; pa
   .card { flex: 1; display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 10px; }
   .card .ph { width: 100%; height: 110px; border-radius: 10px; }
 
-  .hero { padding: 20px 22px; }
-  .hero-title { font-size: 28px; }
+  .hero { padding: 14px 18px; }
+  .hero-title { font-size: 22px; }
   .rows a { min-height: 44px; padding: 8px 12px; font-size: 14px; }
   .rows small { font-size: 12px; }
 
@@ -226,7 +311,7 @@ input, select, textarea { font: inherit; color: var(--ink); min-height: 44px; pa
   .layout-event .col-side .box { border: 1.5px solid var(--line); padding: 14px; }
   .layout-event .col-side .box:first-child { margin-top: 4px; }
   .box-when { line-height: 1.5; }
-  .facts { grid-template-columns: repeat(4, 1fr); }
+  .facts { grid-template-columns: repeat(3, 1fr); }
   .actions { margin-top: 0; }
   .actions .btn { min-height: 44px; }
 

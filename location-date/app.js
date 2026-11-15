@@ -189,7 +189,7 @@ function pageToday() {
           ${alerts.length ? `<section class="alerts" aria-labelledby="h-chg"><h2 id="h-chg" class="visually-hidden">Changes in the next 7 days</h2><ul>${alerts.map(m => `<li><b>${esc(label(m.community))}:</b> ${m.status === "postponed" ? "Mass postponed" : "no Mass"} on ${esc(fmtDate(m.date))}</li>`).join("")}</ul></section>` : ""}
           <section aria-labelledby="h-week">
             <div class="sec-head"><h2 id="h-week">This week</h2><a href="events.html">See all</a></div>
-            ${week.length ? `<ul class="cards">${week.map(eventCard).join("")}</ul>` : `<p class="empty">No events in the next 7 days.</p>`}
+            ${week.length ? `<ul class="cards cards-scroll">${week.map(eventCard).join("")}</ul>` : `<p class="empty">No events in the next 7 days.</p>`}
           </section>
         </div>
         <aside class="col-side" aria-label="Sign-ups, feasts and creating an event">
@@ -261,7 +261,6 @@ function pageEvents() {
       <aside class="col-side" aria-label="Filters">
         <div class="mobile-only">
           ${groups.map(([g, , all, opts]) => chips(g, [["all", all], ...Object.entries(opts)], () => false)).join("")}
-          <label class="toggle"><input type="checkbox" data-signup> Only events with sign-up</label>
         </div>
         <div class="desk-only filters">
           <h2>Filters</h2>
@@ -323,7 +322,6 @@ function pageEvent() {
         <p class="sub">${esc(e.place)} · ${esc(label(e.community))} · <em class="tag">${esc(TYPE_LABELS[e.type])}</em></p>
         ${e.note ? `<p class="warn">${esc(e.note)}</p>` : ""}
         <dl class="facts">
-          <div><dt>Language</dt><dd>${orNC(e.language)}</dd></div>
           <div><dt>For whom</dt><dd>${orNC(e.forWhom)}</dd></div>
           <div><dt>Bring</dt><dd>${orNC(e.bring)}</dd></div>
           <div><dt>Sign-up</dt><dd>${su}</dd></div>
@@ -413,7 +411,7 @@ function pageCreate() {
   // Required fields and their labels (for the error message).
   const NEED = { title: "Event name", type: "Type", community: "Community", date: "Date", time: "Time",
     place: "Place / room", what: "Description", language: "Language", forWhom: "For whom" };
-  const radios = (name, legend, opts) => `<fieldset class="field"><legend>${legend}</legend><div class="chips chips-wrap">` +
+  const radios = (name, legend, opts, scroll) => `<fieldset class="field"><legend>${legend}</legend><div class="chips ${scroll ? "chips-scroll" : "chips-wrap"}">` +
     opts.map(([v, t]) => `<label class="chip-r"><input type="radio" name="${name}" value="${esc(v)}"><span>${esc(t)}</span></label>`).join("") +
     `</div></fieldset>`;
 
@@ -426,7 +424,7 @@ function pageCreate() {
         <form id="f" novalidate>
           <label class="field">Event name<input name="title" placeholder="e.g. Community café"></label>
           <div class="grid-2">
-            ${radios("type", "Type", [...Object.entries(TYPE_LABELS), ["other", "Other"]])}
+            ${radios("type", "Type", [...Object.entries(TYPE_LABELS), ["other", "Other"]], true)}
             ${radios("community", "Community", COMMUNITIES.map(k => [k, label(k)]))}
           </div>
           <div class="grid-3">
