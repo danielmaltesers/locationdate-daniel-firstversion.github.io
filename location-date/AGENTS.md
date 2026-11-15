@@ -16,8 +16,10 @@ WHAT to build is in `SPEC.md`. WHAT IS TRUE is in `data/`.
 - Build exactly the pages and labels listed in `SPEC.md` — no extra pages, no renamed labels.
 - The create form is simulated: it never sends or stores data anywhere.
 
-## Design (the grey rule)
-- System font only, greys only (black, white, greys), no images, no icons, no animations.
+## Design (visual phase, v1.0 — "Pedra & Luz")
+- Use only the colours and sizes in `DESIGN-TOKENS.md`. System font, no external fonts.
+- The Mission's logo (`img/logo-symbol.png`) is the only image so far. Event pictures stay grey placeholders until real photos are approved.
+- No icons, no animations. Keep files small (poor network at the place).
 - Mobile first: design for a 360 px wide phone, then let it grow (desktop layout from 900 px).
 - Compact layout (see the wireframes): most of each page visible on the first screen.
 - Touch targets at least 24 px (WCAG 2.2 AA) with enough space between them; good contrast, readable without zoom, readable outside.
