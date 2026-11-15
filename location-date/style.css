@@ -407,3 +407,8 @@ main{flex:1 0 auto;width:100%}
 @media(min-width:900px){.map-frame{height:200px}}
 /* Event tags in dark blue */
 .tags em,.tag{background:#1A2340;color:#fff}
+/* Desktop filter checkboxes: compact list */
+.check{min-height:26px;font-size:13.5px;gap:8px}
+.check input{width:16px;height:16px;accent-color:#1A2340}
+.filters fieldset{margin-top:10px}
+.filters legend{font-size:13px;margin-bottom:2px}
