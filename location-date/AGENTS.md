@@ -19,6 +19,7 @@ WHAT to build is in `SPEC.md`. WHAT IS TRUE is in `data/`.
 ## Design (visual phase, v1.0 — "Pedra & Luz")
 - Use only the colours and sizes in `DESIGN-TOKENS.md`. System font, no external fonts.
 - The Mission's logo (`img/logo-symbol.png`) is the only image so far. Event pictures stay grey placeholders until real photos are approved.
+- Map on the event page: embedded Google Maps (mention it in the privacy note). No other external content.
 - No icons, no animations. Keep files small (poor network at the place).
 - Mobile first: design for a 360 px wide phone, then let it grow (desktop layout from 900 px).
 - Compact layout (see the wireframes): most of each page visible on the first screen.

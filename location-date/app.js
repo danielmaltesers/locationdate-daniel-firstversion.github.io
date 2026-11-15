@@ -334,7 +334,7 @@ function pageEvent() {
       <aside class="col-side" aria-label="Date, place and actions">
         <div class="box">
           <p class="desk-only box-when"><b>${esc(fmtDate(e.date))} · ${esc(e.time)}</b><br><span class="small">${esc(e.place)}, ${esc(city)}</span></p>
-          <span class="ph ph-map desk-only" aria-hidden="true">Map</span>
+          <iframe class="map-frame" title="Map: ${esc(e.place)}" src="https://maps.google.com/maps?q=${encodeURIComponent(e.place + ", " + city)}&z=16&output=embed" loading="lazy"></iframe>
           <div class="actions">
             <button type="button" class="btn" id="ics">Add to calendar</button>
             <a class="btn btn-2" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.place + ", " + city)}">Directions</a>

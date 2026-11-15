@@ -398,3 +398,10 @@ body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 main{flex:1 0 auto;width:100%}
 /* Cancelled Mass rows, cancelled hero and warnings: same light red gradient as the alerts */
 .mass-row.is-off,.hero.is-off,.warn{background:linear-gradient(135deg,#FDECEE 0%,#FFF7F8 60%,#FFFFFF 100%)}
+
+/* Event page map: placeholder with "Show map" button, then Google Maps after a tap */
+.ph-map{flex-direction:column;gap:6px;text-align:center;padding:10px}
+.ph-map small{font-size:10.5px;color:#5B6478}
+.map-btn{font:inherit;font-size:13px;font-weight:700;color:#fff;background:#2D66B0;border:0;border-radius:16px;min-height:32px;padding:0 16px;cursor:pointer}
+.map-frame{display:block;width:100%;height:180px;border:0;border-radius:10px;margin:8px 0 12px}
+@media(min-width:900px){.map-frame{height:200px}}
