@@ -416,7 +416,6 @@ function pageCreate() {
     `</div></fieldset>`;
 
   app.innerHTML = `
-    <p class="crumb small">Create event</p>
     <div class="layout layout-create">
       <div class="col-main">
         <h1>Create event</h1>
