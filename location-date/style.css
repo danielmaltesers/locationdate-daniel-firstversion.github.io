@@ -388,3 +388,11 @@ main{padding-top:10px}
 /* Logo wordmark image (Mission's own lettering) */
 .brand .brand-word{height:31px;width:auto}
 @media(min-width:900px){.brand .brand-word{height:36px}}
+/* Footer in colour: deep blue gradient from the logo */
+.site-footer{background:linear-gradient(135deg,#1A2340 0%,#24407A 100%);color:#D9ECFF;border-top:3px solid #2D66B0}
+.site-footer b{color:#fff}
+.site-footer a{color:#fff}
+.site-footer .small,.site-footer small{color:#B9C3D6}
+/* Footer always at the bottom of the window, also on short pages */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+main{flex:1 0 auto;width:100%}
